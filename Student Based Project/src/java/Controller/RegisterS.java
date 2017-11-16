@@ -63,7 +63,7 @@ public class RegisterS extends HttpServlet
          props.put("mail.smtp.port","587");
          out.println("3");
          final String username="dummym33@gmail.com";
-         final String password="DUMMYMAIL123";
+         final String password="12345";
          final String fromEmail="dummym33@gmail.com";
          final String toEmail=Email;
          final String subject="|Bahushali| Uzumaki";
