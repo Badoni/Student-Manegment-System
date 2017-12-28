@@ -32,6 +32,10 @@
            {
                color: springgreen;
            }
+           #fp
+           {
+               color: #FF0083;
+           }
         </style>
         
     </head>
@@ -64,7 +68,8 @@
                     <br>
                     
                     <center><button type="submit" class="btn btn-success btn-block">Submit</button></center>
-            
+                    <br>
+                    <b><a href="${pageContext.request.contextPath}/View/forget.jsp" id="fp">forget Password</a></b>
                 </form>
             
             </div> 

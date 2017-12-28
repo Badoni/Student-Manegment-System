@@ -14,6 +14,8 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link href="Asstes/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        
         
         <link rel="stylesheet" href="Asstes/File.css">
         
@@ -23,6 +25,8 @@
            .navbar
             {
              background-color: SlateBlue;
+             margin-bottom: 0;
+             border-radius: 0;
             }  
             #myNavbar li a
             {
@@ -31,7 +35,7 @@
             }
             .icon-bar
             {
-                background-color: #000;
+                background-color: #e67e22;
             }
             #adm
             {
@@ -39,7 +43,7 @@
             }
             #id
             {
-                color: white;
+                color: #e67e22;
             }
         </style>
     </head>
@@ -65,8 +69,8 @@
         
    
         <li class="active"><a href="${pageContext.request.contextPath}/View/MasterPage.jsp"><span class="glyphicon glyphicon-home" id="id"></span> Home</a></li>
-        <li><a href="${pageContext.request.contextPath}/View/About.jsp"><span class="glyphicon glyphicon-asterisk" id="id"></span> About</a></li>
-        <li><a href="${pageContext.request.contextPath}/View/Contact us.jsp"><span class="glyphicon glyphicon-asterisk" id="id"></span> Contact Us</a></li>
+        <li><a href="${pageContext.request.contextPath}/View/About.jsp"><i class="fa fa-chain" id="id"></i> About</a></li>
+        <li><a href="${pageContext.request.contextPath}/View/Contact.jsp"><span class="glyphicon glyphicon-asterisk" id="id"></span> Contact Us</a></li>
             
     </ul>
     
@@ -84,7 +88,7 @@
     %>
     
         <li><a href="${pageContext.request.contextPath}/View/Register.jsp"><span class="glyphicon glyphicon-user" id="id"></span> Sign Up</a></li>
-        <li><a href="${pageContext.request.contextPath}/View/Login.jsp"><span class="glyphicon glyphicon-log-in" id="id"></span> Login</a></li>
+        <li><a href="${pageContext.request.contextPath}/View/Login.jsp"><span class="glyphicon glyphicon-log-in" id="id"></span> Log In</a></li>
    
      <%  
         } 
@@ -92,14 +96,12 @@
         {
      %>
         <li><a href="${pageContext.request.contextPath}/LogOutS"><span class="glyphicon glyphicon-off" id="id"></span> Logout</a></li>
-        <%session.setAttribute("name",username); %>
-        <li><a href="${pageContext.request.contextPath}/ProfileS"><span class="glyphicon glyphicon-heart" id="id"></span> Wellcome <%=firstname %></a></li>
+        <li><a href="${pageContext.request.contextPath}/ProfileS"><span class="glyphicon glyphicon-heart" id="id"></span> Wellcome <%= firstname %></a></li>
         <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Student Profile <span class="glyphicon glyphicon-hand-down" id="id"></span></a>
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Student Desk <span class="glyphicon glyphicon-hand-down" id="id"></span></a>
           <ul class="dropdown-menu">
             <li><a href="${pageContext.request.contextPath}/View/MyFee.jsp">My Fees Report</a></li>
             <li><a href="${pageContext.request.contextPath}/View/MyAttendnc.jsp">My Attendence</a></li>
-            <li><a href="#">Profile Change</a></li>
           </ul>
         </li>
         
@@ -109,7 +111,7 @@
        { 
     %>
        <li><a href="${pageContext.request.contextPath}/LogOutS"><span class="glyphicon glyphicon-off" id="id"></span> Logout</a></li>
-       <li><a href="<%session.setAttribute("name",username); %>${pageContext.request.contextPath}/ProfileS"><span class="glyphicon glyphicon-heart" id="id"></span> Wellcome <%=firstname %> {Admin}</a></li>
+       <li><a href="${pageContext.request.contextPath}/View/Register2.jsp"><span class="glyphicon glyphicon-heart" id="id"></span> Wellcome <%=firstname %> {Admin}</a></li>
        <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#">Admin Panel <span class="glyphicon glyphicon-hand-down" id="id"></span></a>
           <ul class="dropdown-menu">
@@ -122,6 +124,7 @@
                     <li><a href="${pageContext.request.contextPath}/View/ShowAttnd.jsp">Attendanc Report </a></li>
                 </ul>  
             </li>
+            <li><a href="${pageContext.request.contextPath}/ProfileS"><%session.setAttribute("name",username); %> Admin Profile</a></li>
           </ul>
         </li>
        <% 

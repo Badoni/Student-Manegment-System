@@ -23,19 +23,17 @@
               }
               form
               {
-              background-color: #00ff140d;
               color: white;
               padding: 40px;
               margin-top: 40px;
               padding-bottom: 60px;
-              box-shadow: 10px 10px 5px rgba(6,1,1,0.43);
+              box-shadow: 10px 10px 5px rgba(9,1,1,0.93);
               }
           
               .form-control
               {
                   border-radius: 0px;
                   color: white;
-                  border-radius:1px solid #291212;
               }
               #example
               {
@@ -54,7 +52,7 @@
         <%@include file="Header.jsp"%>
         
         <div class="container">
-            
+            <br>
             <div class="well">
                 <center> <h1>Register with us</h1> </center>
             </div>
@@ -68,37 +66,38 @@
                       
                          <div class="form-group">
                         <label for="exampleInputFirstName">First Name</label>
-                        <input type="text" class="form-control" id="example" name="fname" placeholder="Name">
+                        <input type="text" class="form-control" id="example" name="fname" placeholder="Name" required="This Field Is Required">
                         </div>
                       
                          <br>
                          
                          <div class="form-group">
                         <label for="exampleInputLastName">Last Name</label>
-                        <input type="text" class="form-control" id="example" name="lname" placeholder="Surname">
+                        <input type="text" class="form-control" id="example" name="lname" placeholder="Surname" required="This Field Is Required">
                         </div>
                     
                          <br>
                          
                          <div class="form-group">
                         <label for="exampleInputEmail">Email</label>
-                        <input type="email" class="form-control" id="example" name="email" placeholder="Email">
+                        <input type="email" class="form-control" id="example" name="email" placeholder="Email" required="This Field Is Required">
                         </div>
                         
                          <br>
                          
                          <div class="form-group">
                         <label for="exampleInputMobileNumber">Mobile number</label>
-                        <input type="tel" class="form-control" id="example" name="mobile" placeholder="Number">
+                        <input type="tel" class="form-control" id="example" name="mobile" placeholder="Number" required="This Field Is Required">
                         </div>
                          
                          <br>
                          
                          <div class="form-group">
                         <label for="gender1">Gender</label>
-                        <select class="form-control" name="gender" id="example">
-                            <option>Male</option>
-                            <option>Female</option>
+                        <select class="form-control" name="gender" id="example" required="This Field Is Required">
+                            <option> Gender</option>
+                            <option> Male</option>
+                            <option> Female</option>
                             </select>          
                         </div>
                          
@@ -106,18 +105,18 @@
                          
                          <div class="form-group">
                         <label for="exampleInputDateOfBirth">Date Of Birth</label>
-                        <input type="date" class="form-control"  id="example" name="birthofdate" placeholder="Date Of Birth" >
+                        <input type="date" class="form-control"  id="example" name="birthofdate" placeholder="Date Of Birth" required="This Field Is Required">
                         </div>
                 
                          <br>
                          
                          <div class="form-group">
                         <label for="exampleInputPassword">Password</label>
-                        <input type="password" class="form-control" id="example" name="password" placeholder="Password">
+                        <input type="password" class="form-control" id="example" name="password" placeholder="Password" required="This Field Is Required">
                         </div>
                     
                         <center>
-                            <button type="submit" class="btn btn-success" id="button">Submit</button>
+                            <button type="submit" class="btn btn-success" id="button">Next</button>
                         </center>
                     
                      </form>

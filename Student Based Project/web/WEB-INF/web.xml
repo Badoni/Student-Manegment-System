@@ -32,6 +32,18 @@
         <servlet-name>AttendS</servlet-name>
         <servlet-class>Controller.AttendS</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>feedbackS</servlet-name>
+        <servlet-class>Controller.feedbackS</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>RegisterS2</servlet-name>
+        <servlet-class>Controller.RegisterS2</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ForgetS</servlet-name>
+        <servlet-class>Controller.ForgetS</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>RegisterS</servlet-name>
         <url-pattern>/RegisterS</url-pattern>
@@ -63,6 +75,18 @@
     <servlet-mapping>
         <servlet-name>AttendS</servlet-name>
         <url-pattern>/AttendS</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>feedbackS</servlet-name>
+        <url-pattern>/feedbackS</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RegisterS2</servlet-name>
+        <url-pattern>/RegisterS2</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ForgetS</servlet-name>
+        <url-pattern>/ForgetS</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

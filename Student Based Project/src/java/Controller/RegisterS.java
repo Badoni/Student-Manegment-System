@@ -28,8 +28,13 @@ public class RegisterS extends HttpServlet
         response.setContentType("text/html;charset=UTF-8");
         
         PrintWriter out = response.getWriter();
+        int randomPin=(int)(Math.random()*9000)+1000;
+        String otp=String.valueOf(randomPin);
+        
         try
         {
+              
+
            String First_Name = request.getParameter("fname");
            String Last_Name = request.getParameter("lname");
            String Email = request.getParameter("email");
@@ -37,7 +42,7 @@ public class RegisterS extends HttpServlet
            String Gender = request.getParameter("gender");
            String Date = request.getParameter("birthofdate");
            String Password2 = request.getParameter("password");
-           String UserName2 = "U@N" + First_Name;
+           String UserName2 = otp;
            String Role="Student";
            String Active="Non-Active";
            Class.forName("org.h2.Driver");
@@ -62,11 +67,11 @@ public class RegisterS extends HttpServlet
          props.put("mail.smtp.host","smtp.gmail.com");
          props.put("mail.smtp.port","587");
          out.println("3");
-         final String username="dummym33@gmail.com";
-         final String password="12345";
+         final String username="Enter Your Mail here";
+         final String password="Enter Your Password Here";
          final String fromEmail="dummym33@gmail.com";
          final String toEmail=Email;
-         final String subject="|Bahushali| Uzumaki";
+         final String subject="Lalit Badoni";
          final String textmessage="your USERNAME is : "+ UserName2 + " your PASSWORD is : "+ Password2 + "\n" + " Your Account Active With In 24 Hours";
          out.println("4");
          

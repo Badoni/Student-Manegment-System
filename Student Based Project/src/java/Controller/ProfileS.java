@@ -44,7 +44,7 @@ public class ProfileS extends HttpServlet
               String password=rs.getString(8);
               String role= rs.getString(9);
             
-                  session.setAttribute("usname",username);
+                  session.setAttribute("name",username);
                   session.setAttribute("ftname",firstname);
                   session.setAttribute("ltname",lastname);
                   session.setAttribute("email",email);
